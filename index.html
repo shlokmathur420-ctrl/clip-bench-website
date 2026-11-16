@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clip Bench is a personal video clipping and publishing tool for creating YouTube Shorts and Instagram Reels.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Clip Bench — Create. Clip. Publish.</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #131b30;
+      --text: #f5f7ff;
+      --muted: #aab5cc;
+      --accent: #8b7cff;
+      --accent2: #42d6b5;
+      --border: rgba(255,255,255,.11);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .container { width: min(1100px, 90%); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(11,16,32,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      min-height: 72px; display: flex;
+      align-items: center; justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { font-size: 21px; font-weight: 800; letter-spacing: -.5px; }
+    .brand span { color: var(--accent); }
+    nav a { text-decoration: none; color: var(--muted); margin-left: 22px; font-size: 14px; }
+    nav a:hover { color: white; }
+    .hero { padding: 105px 0 90px; text-align: center; }
+    .eyebrow {
+      display: inline-block; padding: 7px 14px;
+      border: 1px solid var(--border); border-radius: 30px;
+      color: var(--accent2); font-size: 13px;
+      background: rgba(66,214,181,.06);
+    }
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.08; letter-spacing: -3px;
+      margin: 25px auto 20px; max-width: 850px;
+    }
+    h1 span {
+      background: linear-gradient(100deg, #9c8cff, #42d6b5);
+      -webkit-background-clip: text;
+      background-clip: text; color: transparent;
+    }
+    .hero p { color: var(--muted); max-width: 650px; margin: 0 auto; font-size: 18px; }
+    .actions { margin-top: 32px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 12px 21px; border-radius: 10px;
+      text-decoration: none; font-weight: 700; font-size: 14px;
+      background: var(--accent); color: white;
+    }
+    .btn.secondary { background: transparent; border: 1px solid var(--border); }
+    section { padding: 65px 0; }
+    .section-heading { text-align: center; margin-bottom: 35px; }
+    h2 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 10px; letter-spacing: -1px; }
+    .section-heading p, .muted { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .panel {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 16px; padding: 25px;
+    }
+    .panel .icon { font-size: 27px; }
+    .panel h3 { margin: 12px 0 7px; }
+    .panel p { color: var(--muted); margin: 0; font-size: 14px; }
+    .privacy { max-width: 850px; margin: auto; }
+    .privacy h3 { margin-top: 28px; }
+    .privacy p, .privacy li { color: var(--muted); }
+    .privacy a { color: var(--accent2); }
+    .notice {
+      border-left: 3px solid var(--accent2);
+      background: rgba(66,214,181,.06);
+      padding: 16px 20px; border-radius: 8px; color: var(--muted);
+    }
+    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: 13px; }
+    footer .container { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; padding: 17px 0; flex-direction: column; }
+      nav a { margin: 0 16px 0 0; }
+      .hero { padding: 75px 0 60px; }
+      h1 { letter-spacing: -1.5px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">CLIP<span>BENCH</span></div>
+      <div>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">A personal short-form video workspace</div>
+      <h1>Turn long videos into <span>short-form content.</span></h1>
+      <p>
+        Clip Bench is a personal video clipping and publishing tool
+        designed to help transform longer videos into vertical clips
+        for YouTube Shorts and Instagram Reels.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#features">Explore Clip Bench</a>
+        <a class="btn secondary" href="#privacy">Read Privacy Policy</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Everything in one workflow</h2>
+        <p>Tools to help create, review and publish short-form videos.</p>
+      </div>
+      <div class="grid">
+        <div class="panel">
+          <div class="icon">🎬</div>
+          <h3>Video clipping</h3>
+          <p>Generate shorter video segments from longer source videos and prepare them for vertical formats.</p>
+        </div>
+        <div class="panel">
+          <div class="icon">💬</div>
+          <h3>Transcription and captions</h3>
+          <p>Use local transcription tools to generate subtitles and support English translation workflows.</p>
+        </div>
+        <div class="panel">
+          <div class="icon">🚀</div>
+          <h3>Publishing workflow</h3>
+          <p>Review clips and prepare uploads or scheduled publishing to connected social platforms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="container">
+      <div class="section-heading">
+        <h2>How Clip Bench works</h2>
+        <p>Designed around a local-first workflow on your Mac.</p>
+      </div>
+      <div class="grid">
+        <div class="panel">
+          <div class="icon">01</div>
+          <h3>Choose a source</h3>
+          <p>Provide a supported video source and download it to your local computer.</p>
+        </div>
+        <div class="panel">
+          <div class="icon">02</div>
+          <h3>Create and review</h3>
+          <p>Transcribe, select segments, render vertical clips and review the results locally.</p>
+        </div>
+        <div class="panel">
+          <div class="icon">03</div>
+          <h3>Publish when ready</h3>
+          <p>Choose whether to upload or schedule content through your connected platform accounts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="container privacy">
+      <div class="section-heading">
+        <h2>Privacy Policy</h2>
+        <p>Last updated: November 16, 2026</p>
+      </div>
+
+      <div class="notice">
+        Clip Bench is a personal-use application. Its processing workflow runs locally
+        on the computer where it is installed. When you choose to publish content,
+        the relevant media and information are sent to the platform you select.
+      </div>
+
+      <h3>1. Information processed</h3>
+      <p>
+        Clip Bench may process video URLs, downloaded video and audio files,
+        transcripts, subtitles, generated titles and descriptions, hashtags,
+        clip files, and publishing settings. This information is used to provide
+        the application's clipping and publishing features.
+      </p>
+
+      <h3>2. Local processing and storage</h3>
+      <p>
+        Video downloading, transcription, clip rendering and local metadata
+        generation are designed to run on your Mac using locally installed tools.
+        Project files, generated clips, configuration files and authentication
+        tokens may be stored on that computer. Their exact storage and retention
+        depend on the application's configuration and your actions.
+      </p>
+
+      <h3>3. YouTube and Google services</h3>
+      <p>
+        If you connect a Google or YouTube account, Clip Bench uses Google
+        authorization to access the permissions you approve. These permissions
+        are used for the YouTube features you choose, such as uploading videos.
+        When you publish, the selected video and associated metadata are sent
+        to YouTube and handled under Google's applicable terms and policies.
+      </p>
+      <p>
+        Google account authorization data, including tokens, may be stored
+        locally so the application can maintain its connection. Do not share
+        these files or publish them in a public code repository.
+      </p>
+
+      <h3>4. Instagram services</h3>
+      <p>
+        If you connect an Instagram account, Clip Bench uses the applicable
+        Meta services and permissions to support the Instagram publishing
+        features you choose. Publishing a Reel sends the selected video and
+        caption to the relevant Meta/Instagram services.
+      </p>
+
+      <h3>5. Third-party services</h3>
+      <p>
+        Clip Bench may interact with third-party services such as YouTube,
+        Google, Instagram, Meta and video-hosting or delivery services needed
+        for publishing. Those services process information under their own
+        privacy policies and terms. Source video providers may also receive
+        requests when a video is downloaded.
+      </p>
+
+      <h3>6. Sharing and publishing</h3>
+      <p>
+        Clip Bench does not operate its own cloud video-processing service.
+        However, information may leave your computer when you use connected
+        services, create a public delivery link for a video, or upload or
+        schedule content. Published content is subject to the visibility
+        settings and policies of the destination platform.
+      </p>
+
+      <h3>7. Data retention and security</h3>
+      <p>
+        Local project files, media and authentication tokens may remain on
+        your computer until you delete them. You are responsible for protecting
+        your device, keeping credentials private and removing files you no
+        longer need. No method of electronic storage or transmission is
+        completely secure.
+      </p>
+
+      <h3>8. Your choices</h3>
+      <p>
+        You can disconnect connected accounts, revoke permissions through
+        the relevant platform's account settings, and delete locally stored
+        project files and tokens. Deleting local files does not automatically
+        delete content already uploaded to YouTube or Instagram.
+      </p>
+
+      <h3>9. Children's privacy</h3>
+      <p>
+        Clip Bench is not designed to collect personal information from
+        children. It is intended for personal use by its operator.
+      </p>
+
+      <h3>10. Changes to this policy</h3>
+      <p>
+        This policy may be updated when the application's features or data
+        practices change. The latest version will be published on this page.
+      </p>
+
+      <h3>11. Contact</h3>
+      <p>
+        For privacy questions, contact the application operator through
+        the contact information provided directly to authorized users.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Clip Bench</h2>
+        <p>A personal workspace for short-form video creation and publishing.</p>
+        <a class="btn secondary" href="https://github.com/shlokmathur420-ctrl/clip-bench-website">
+          View website repository
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Clip Bench. Personal-use project.</span>
+    <span><a href="#privacy">Privacy Policy</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
